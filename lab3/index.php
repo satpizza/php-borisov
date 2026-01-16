@@ -14,18 +14,12 @@
             <button type="submit" class="submit-btn">пусь</button>
         </form>
 
-        <?php
-        if (isset($_GET['love_mom_Egora']) && $_GET['love_mom_Egora'] !== ''){
-            $ultra_zhirniy = explode (' ', $_GET['love_mom_Egora']);
-            upFunc($ultra_zhirniy);
-            echo '<div class="result">' . implode (' ', $ultra_zhirniy) . '</div>';
-        }
-
-        function upFunc (&$ultra_zhirniy){
-            for ($anti_zhir = 0; $anti_zhir < count($ultra_zhirniy); $anti_zhir++){
-                if(($anti_zhir % 2) > 0){
-                    $ultra_zhirniy [$anti_zhir] = strtoupper ($ultra_zhirniy[$anti_zhir]);
-                }
-            }
-        }
-      
+<?php
+$XVI="Иван Васильевич";
+$XVIII="Пётр Алексеевич";
+$XIX="Николай Павлович";
+    //    "В XVI веке царствовал Иван Васильевич"
+    if (isset($_GET['love_mom_Egora']) && $_GET['love_mom_Egora'] !== ''){
+        $vek = $_GET ['love_mom_Egora'];
+    echo 'В '.$vek.' царствовал '. $$vek;
+    }
