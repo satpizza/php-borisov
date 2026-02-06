@@ -230,19 +230,101 @@
     </style>
     <script type="application/ld+json">
 {
-  "@context": "https://schema.org", //ресурс schema.org
-  "@graph": [ //сразу несколько типов
-    {//тип 1
-      "@type": "WebPage", //описание что за сайт
-      "name": "SEO Блог",
-      "description": "Практические советы по SEO и продвижению бизнеса",
-      "url": "https://resultup.agency/blog"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cryptoglass.example.com/#webpage",
+      "url": "https://cryptoglass.example.com/",
+      "name": "CryptoGlass | Future Exchange Terminal",
+      "description": "CryptoGlass — передовая биржа для торговли криптовалютой. Безопасные сделки, низкие комиссии, мгновенные транзакции. Начните инвестировать сегодня.",
+      "isPartOf": {
+        "@id": "https://cryptoglass.example.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://cryptoglass.example.com/#breadcrumb"
+      },
+      "inLanguage": "ru-RU",
+      "potentialAction": [{
+        "@type": "ReadAction",
+        "target": ["https://cryptoglass.example.com/"]
+      }]
     },
-    {//тип 2
-      "@type": "Blog", //описание блога (на странице блога использовать)
-      "name": "SEO Meat блог",
-      "description": "Обучение и материалы по SEO-оптимизации",
-      "url": "https://seomeat.ru/blog"
+    {
+      "@type": "WebSite",
+      "@id": "https://cryptoglass.example.com/#website",
+      "url": "https://cryptoglass.example.com/",
+      "name": "CryptoGlass",
+      "description": "Будущее финансов начинается здесь. Присоединяйтесь к самой технологичной платформе обмена криптовалют.",
+      "publisher": {
+        "@id": "https://cryptoglass.example.com/#organization"
+      },
+      "inLanguage": "ru-RU",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://cryptoglass.example.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cryptoglass.example.com/#organization",
+      "name": "CryptoGlass",
+      "legalName": "CryptoGlass Exchange",
+      "url": "https://cryptoglass.example.com/",
+      "logo": "https://cryptoglass.example.com/logo.png",
+      "foundingDate": "2023",
+      "description": "Технологичная криптовалютная биржа с передовыми решениями безопасности",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RU"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "support@cryptoglass.example.com",
+        "availableLanguage": ["Russian", "English"]
+      },
+      "sameAs": [
+        "https://t.me/cryptoglass",
+        "https://twitter.com/cryptoglass",
+        "https://facebook.com/cryptoglass",
+        "https://instagram.com/cryptoglass"
+      ]
+    },
+    {
+      "@type": "FinancialService",
+      "name": "CryptoGlass Exchange",
+      "description": "Криптовалютная биржа для покупки, продажи и торговли цифровыми активами",
+      "url": "https://cryptoglass.example.com/",
+      "feesAndCommissionsSpecification": "Низкие комиссии от 0.1%",
+      "currenciesAccepted": "BTC, ETH, USDT, RUB, USD, EUR",
+      "areaServed": "Worldwide",
+      "serviceType": "Cryptocurrency Exchange",
+      "provider": {
+        "@id": "https://cryptoglass.example.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://cryptoglass.example.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://cryptoglass.example.com/"
+        }
+      ]
     }
   ]
 }
