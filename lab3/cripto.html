@@ -235,6 +235,23 @@
         }
     </style>
     <script type="application/ld+json">
+        
+        "@type": "BreadcrumbList", //тип хлебные крошки
+  "itemListElement": [ //событие списка
+    {
+      "@type": "ListItem", //элемент списка
+      "position": 1, //нумерация позиций
+      "name": "Книги", //название
+      "item": "https://example.com/books" //ссылка
+    },
+{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Научная фантастика",
+      "item": "https://example.com/…."
+    }
+  ]
+
 {
   "@context": "https://schema.org",
     "@type": "Organization",
