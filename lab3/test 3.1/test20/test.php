@@ -1,4 +1,4 @@
 <?php
-$slova = ['мать егора, лучшая']
-$lines = file('test.txt');
-print_r ($lines);
+$slova = ['putin', 'breznev'];
+file_put_contents ('test.txt',implode("\n", $slova));
+print_r ($slova); 
