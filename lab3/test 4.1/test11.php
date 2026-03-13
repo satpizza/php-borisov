@@ -11,8 +11,8 @@
         <h1>PHP Regular Expression</h1>
 
         <?php
-                $str = 'aa a1a a22a a333a a4444a a55555a aba aca';
-                $patern = "/a\d*a/";
+                $str = 'aaa@bbb eee7@kkk';
+                $patern = '/([a-z0-9]+)@([a-z0-9]+)/';
         ?>
         
         <div class="code-block">
@@ -30,7 +30,7 @@
             <div class="result-title">Результат preg_replace:</div>
             <div class="result-content">
                 <?php
-                    $result = preg_replace($patern, "нашел", $str);
+                    $result = preg_replace($patern, "$2@$1", $str);
                     echo $result;
                 ?>
             </div>
