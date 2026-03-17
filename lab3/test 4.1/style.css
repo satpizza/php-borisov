@@ -1,3 +1,4 @@
+/* ===== Google Material Design 3 ===== */
 * {
     margin: 0;
     padding: 0;
@@ -5,139 +6,200 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    background-color: #f1f3f4;  /* Gmail background */
+    color: #202124;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    padding: 24px;
 }
 
 .container {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    padding: 40px;
-    max-width: 800px;
+    max-width: 820px;
     width: 100%;
-    transition: transform 0.3s ease;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08), 0 4px 8px 3px rgba(0,0,0,0.05);
+    padding: 36px 40px;
+    transition: box-shadow 0.2s ease;
 }
 
 .container:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 2px 6px 2px rgba(0,0,0,0.08), 0 6px 12px 4px rgba(0,0,0,0.06);
 }
 
-h1 {
-    color: #333;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    text-align: center;
-    border-bottom: 3px solid #667eea;
-    padding-bottom: 10px;
-}
-
-.code-block {
-    background: #f8f9fa;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-left: 5px solid #667eea;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-.code-label {
-    font-size: 0.9em;
-    color: #667eea;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.code-content {
-    font-family: 'Courier New', monospace;
-    font-size: 1.2em;
-    color: #333;
-    word-break: break-all;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-}
-
-.highlight {
-    color: #e83e8c;
-    font-weight: bold;
-}
-
-.result-block {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
-    padding: 25px;
-    margin: 30px 0 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-}
-
-.result-title {
-    color: white;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    opacity: 0.9;
-}
-
-.result-content {
-    background: rgba(255,255,255,0.95);
-    border-radius: 8px;
-    padding: 20px;
-    font-size: 1.5em;
-    font-family: 'Courier New', monospace;
-    color: #333;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    min-height: 60px;
+/* Логотип Google (точные цвета) */
+.google-logo {
+    font-family: 'Google Sans', 'Product Sans', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ecedef;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.info-text {
-    text-align: center;
-    color: #666;
-    font-size: 0.95em;
-    margin-top: 20px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border: 1px dashed #667eea;
-    line-height: 1.6;
-}
-
-.pattern-badge {
-    display: inline-block;
-    background: #e83e8c;
-    color: white;
-    padding: 5px 10px;
+/* Карточки */
+.code-card, .result-card {
+    background-color: #ffffff;
     border-radius: 20px;
-    font-size: 0.8em;
-    margin-top: 10px;
+    border: 1px solid #e1e3e6;
+    padding: 20px 24px 24px 24px;
+    margin: 28px 0;
+    transition: box-shadow 0.2s, border-color 0.2s;
 }
 
+.code-card:hover, .result-card:hover {
+    border-color: #d2d4d7;
+    box-shadow: 0 1px 4px 1px rgba(0,0,0,0.05);
+}
+
+/* Заголовок карточки */
+.card-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5f6368;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 16px;
+}
+
+.card-label .material-icons {
+    font-size: 20px;
+    color: #5f6368;
+}
+
+.function {
+    font-family: 'Google Sans', monospace;
+    background: #e8f0fe;
+    color: #1a73e8;
+    padding: 4px 10px;
+    border-radius: 32px;
+    font-size: 0.8rem;
+    margin-left: 8px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Кодовая строка */
+.code-content {
+    font-family: 'Google Sans', 'Roboto Mono', monospace;
+    font-size: 1.4rem;
+    background: #f8f9fa;
+    padding: 16px 20px;
+    border-radius: 16px;
+    border: 1px solid #dadce0;
+    color: #202124;
+    word-break: break-word;
+}
+
+/* Цвета синтаксиса */
+.keyword {
+    color: #1a73e8;
+    font-weight: 500;
+}
+.string {
+    color: #188038;
+}
+.regexp {
+    background: #fce8e6;
+    color: #c5221f;
+    padding: 2px 8px;
+    border-radius: 32px;
+    font-weight: 500;
+}
+
+/* Чип (маленький бейдж) */
+.chip {
+    display: inline-block;
+    background: #e8f0fe;
+    color: #1a73e8;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 32px;
+    margin-top: 18px;
+    border: 1px solid #cbd5e9;
+    letter-spacing: 0.2px;
+}
+
+/* Результат */
+.result-content {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 450;
+    background: #f8f9fa;
+    padding: 28px 28px;
+    border-radius: 24px;
+    border: 1px solid #dadce0;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.result-badge {
+    background: #e6f4ea;
+    color: #0d652d;
+    padding: 8px 28px;
+    border-radius: 48px;
+    display: inline-block;
+    border: 1px solid #34a85380;
+    font-size: 2.2rem;
+}
+
+/* Информационная панель */
+.info-bar {
+    background: #f1f3f4;
+    border-radius: 48px;
+    padding: 16px 28px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid #dee1e3;
+    color: #3c4043;
+    font-size: 1rem;
+}
+
+.info-bar .material-icons {
+    color: #5f6368;
+    font-size: 24px;
+}
+
+.highlight-chip {
+    background: #202124;
+    color: white;
+    font-weight: 500;
+    padding: 4px 16px;
+    border-radius: 32px;
+    margin-left: 6px;
+    font-size: 0.95rem;
+}
+
+/* Футер */
+.footer {
+    margin-top: 32px;
+    color: #5f6368;
+    font-size: 0.85rem;
+    text-align: center;
+    max-width: 820px;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #dadce0;
+}
+
+/* Адаптивность */
 @media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 2em;
-    }
-    
-    .code-content {
-        font-size: 1em;
-    }
-    
-    .result-content {
-        font-size: 1.2em;
-    }
+    .container { padding: 24px 20px; }
+    .google-logo { font-size: 2.2rem; }
+    .code-content { font-size: 1.1rem; }
+    .result-content { font-size: 1.8rem; }
+    .result-badge { font-size: 1.6rem; padding: 8px 16px; }
 }
